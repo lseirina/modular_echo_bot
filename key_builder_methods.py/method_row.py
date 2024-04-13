@@ -1,3 +1,6 @@
+"""Метод row у класса ReplyKeyboardBuilder позволяет расположить
+кнопки клавиатуры автоматически,
+в зависимости от параметра width - желаемого количества кнопок в ряду."""
 from aiogram import Bot, Dispatcher
 from aiogram.filters import CommandStart
 from aiogram.types import KeyboardButton, Message

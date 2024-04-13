@@ -1,3 +1,6 @@
+"""метод add() добавляет кнопки с нового ряда только если в предыдущем ряду
+для новых кнопок уже нет места.
+Кнопки будут добавляться в ряд пока их там не станет 8."""
 from aiogram import Bot, Dispatcher
 from aiogram.types import Message, KeyboardButton
 from aiogram.filters import CommandStart
@@ -9,10 +12,10 @@ bot = Bot(token=BOT_TOKEN)
 dp = Dispatcher()
 
 buttons_1: list[KeyboardButton] = [
-    KeyboardButton(text=f'Button {i + 1}') for i in range(6)
+    KeyboardButton(text=f'Button {i + 1}') for i in range(5)
 ]
 buttons_2: list[KeyboardButton] = [
-    KeyboardButton(text=f'Button {i + 7}') for i in range(10)
+    KeyboardButton(text=f'Button {i + 6}') for i in range(10)
 ]
 
 kb_builder = ReplyKeyboardBuilder()

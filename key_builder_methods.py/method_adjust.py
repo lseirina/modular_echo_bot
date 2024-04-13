@@ -10,12 +10,12 @@ bot = Bot(token=BOT_TOKEN)
 dp = Dispatcher()
 
 buttons_1: list[KeyboardButton] = [
-    KeyboardButton(text=f'Button {i + 1}') for i in range(8)
+    KeyboardButton(text=f'Button {i + 1}') for i in range(10)
 ]
 
 kb_builder = ReplyKeyboardBuilder()
 kb_builder.add(*buttons_1)
-kb_builder.adjust(2, 1)
+kb_builder.adjust(2, 1, repeat=True)
 
 @dp.message(CommandStart())
 async def process_start_command(message: Message):
